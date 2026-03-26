@@ -87,7 +87,7 @@ operation:
           - columnReferences:
               - columnCounter: f73fc555-a4c1-4da8-81d8-b146da454d52
                 stepCounter: f70e75d7-6480-49d7-862f-b3eb063d209a
-            transform: TRY_CAST("SENSOR_READINGS"."READING_VALUE" as FLOAT)
+            transform: CAST("SENSOR_READINGS"."READING_VALUE" as FLOAT)
     cteString: ""
     description: ""
     destinationName: ""
