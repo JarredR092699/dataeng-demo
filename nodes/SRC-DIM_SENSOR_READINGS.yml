@@ -39,6 +39,7 @@ operation:
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
+        isBusinessKey: true
         name: SENSOR_ID
         nullable: true
         sourceColumnReferences:
