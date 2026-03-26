@@ -73,10 +73,7 @@ operation:
               - columnCounter: 6997697b-0fba-43da-9af1-05e232b207dc
                 stepCounter: f70e75d7-6480-49d7-862f-b3eb063d209a
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: cb90d781-0f8a-445d-8160-bd70d3f4eb81
           stepCounter: bdd510d0-998e-4413-b225-3f716dfd0ebd
@@ -84,17 +81,18 @@ operation:
         dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        keyColumnType: None
         name: READING_VALUE_FLOAT
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
-            transform: CAST("SENSOR_READINGS"."READING_VALUE" as FLOAT)
-        systemColumnType: None
+              - columnCounter: f73fc555-a4c1-4da8-81d8-b146da454d52
+                stepCounter: f70e75d7-6480-49d7-862f-b3eb063d209a
+            transform: TRY_CAST("SENSOR_READINGS"."READING_VALUE" as FLOAT)
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           SENSOR_READINGS: f70e75d7-6480-49d7-862f-b3eb063d209a
