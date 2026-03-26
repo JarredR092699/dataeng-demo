@@ -1,0 +1,8 @@
+fileVersion: 1
+id: "22"
+mappingDefinitions:
+  SRC:
+    database: SAMPLE_DATA
+    schema: LOAD
+name: DEV
+type: Environment
