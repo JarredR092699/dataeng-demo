@@ -1,0 +1,92 @@
+fileVersion: 1
+id: f70e75d7-6480-49d7-862f-b3eb063d209a
+name: SENSOR_READINGS
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cc9801fd-8fd9-456f-8a82-8b90c0c6e7d3
+          stepCounter: f70e75d7-6480-49d7-862f-b3eb063d209a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: SENSOR_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7ca8957d-2494-4e82-b060-488eee088920
+          stepCounter: f70e75d7-6480-49d7-862f-b3eb063d209a
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: EVENT_TS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f73fc555-a4c1-4da8-81d8-b146da454d52
+          stepCounter: f70e75d7-6480-49d7-862f-b3eb063d209a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: READING_VALUE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6997697b-0fba-43da-9af1-05e232b207dc
+          stepCounter: f70e75d7-6480-49d7-862f-b3eb063d209a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: UNIT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: SENSOR_READINGS
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
