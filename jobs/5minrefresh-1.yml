@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "1"
+includeSelector: "{ subgraph: \"SENSOR_READINGS\" }"
+name: 5 min refresh
+type: Job

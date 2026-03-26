@@ -1,0 +1,116 @@
+fileVersion: 1
+id: bdd510d0-998e-4413-b225-3f716dfd0ebd
+name: STG_SENSOR_READINGS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: de03a698-d525-4a90-afc3-3436f0a1269b
+          stepCounter: bdd510d0-998e-4413-b225-3f716dfd0ebd
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: SENSOR_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cc9801fd-8fd9-456f-8a82-8b90c0c6e7d3
+                stepCounter: f70e75d7-6480-49d7-862f-b3eb063d209a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 85fa3a72-a5cf-456d-9b65-f5552d6583b5
+          stepCounter: bdd510d0-998e-4413-b225-3f716dfd0ebd
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: EVENT_TS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7ca8957d-2494-4e82-b060-488eee088920
+                stepCounter: f70e75d7-6480-49d7-862f-b3eb063d209a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d848e1cc-3ed5-4d0f-b40a-3e15e1a35ef7
+          stepCounter: bdd510d0-998e-4413-b225-3f716dfd0ebd
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: READING_VALUE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f73fc555-a4c1-4da8-81d8-b146da454d52
+                stepCounter: f70e75d7-6480-49d7-862f-b3eb063d209a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7ad17b52-9f04-47f2-836c-a4e27e3f0cd1
+          stepCounter: bdd510d0-998e-4413-b225-3f716dfd0ebd
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: UNIT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6997697b-0fba-43da-9af1-05e232b207dc
+                stepCounter: f70e75d7-6480-49d7-862f-b3eb063d209a
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cb90d781-0f8a-445d-8160-bd70d3f4eb81
+          stepCounter: bdd510d0-998e-4413-b225-3f716dfd0ebd
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: READING_VALUE_FLOAT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CAST("SENSOR_READINGS"."READING_VALUE" as FLOAT)
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          SENSOR_READINGS: f70e75d7-6480-49d7-862f-b3eb063d209a
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: SENSOR_READINGS
+        join:
+          joinCondition: FROM {{ ref('SRC', 'SENSOR_READINGS') }} "SENSOR_READINGS"
+        name: STG_SENSOR_READINGS
+        noLinkRefs: []
+  name: STG_SENSOR_READINGS
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
