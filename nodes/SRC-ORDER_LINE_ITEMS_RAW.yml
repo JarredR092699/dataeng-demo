@@ -1,0 +1,111 @@
+fileVersion: 1
+id: 111361e4-d35a-4673-a051-bd1e2eed23b9
+name: ORDER_LINE_ITEMS_RAW
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d6436947-730a-4426-9c07-010b9f134550
+          stepCounter: 111361e4-d35a-4673-a051-bd1e2eed23b9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: LINE_ITEM_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 80a046e6-5b4a-4b97-aa30-594ccd8fde13
+          stepCounter: 111361e4-d35a-4673-a051-bd1e2eed23b9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ORDER_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 37ca8897-7e58-43e4-b77b-a351f32569d7
+          stepCounter: 111361e4-d35a-4673-a051-bd1e2eed23b9
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: PRODUCT_SKU
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0cdfd647-44ce-4a12-b027-2ebd0bc4af88
+          stepCounter: 111361e4-d35a-4673-a051-bd1e2eed23b9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: QUANTITY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d086b5e8-19f4-4510-8257-78a5cf27ed20
+          stepCounter: 111361e4-d35a-4673-a051-bd1e2eed23b9
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: UNIT_PRICE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: ORDER_LINE_ITEMS_RAW
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

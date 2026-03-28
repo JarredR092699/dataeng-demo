@@ -1,0 +1,112 @@
+fileVersion: 1
+id: a69b2961-8900-4c7e-a285-e77f7e435792
+name: STG_ORDER_LINE_ITEMS_RAW
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d848bed7-ddca-4110-a4f2-cf4414b02519
+          stepCounter: a69b2961-8900-4c7e-a285-e77f7e435792
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: LINE_ITEM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d6436947-730a-4426-9c07-010b9f134550
+                stepCounter: 111361e4-d35a-4673-a051-bd1e2eed23b9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7c92255b-b7a1-4071-84f5-becde70f0a03
+          stepCounter: a69b2961-8900-4c7e-a285-e77f7e435792
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ORDER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 80a046e6-5b4a-4b97-aa30-594ccd8fde13
+                stepCounter: 111361e4-d35a-4673-a051-bd1e2eed23b9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ae907f38-e772-4fd8-b282-6e23fa1b3e4c
+          stepCounter: a69b2961-8900-4c7e-a285-e77f7e435792
+        config: {}
+        dataType: VARCHAR(20)
+        description: ""
+        name: PRODUCT_SKU
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 37ca8897-7e58-43e4-b77b-a351f32569d7
+                stepCounter: 111361e4-d35a-4673-a051-bd1e2eed23b9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: faf0e50d-b492-4bcd-91a9-f6b8d5587230
+          stepCounter: a69b2961-8900-4c7e-a285-e77f7e435792
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0cdfd647-44ce-4a12-b027-2ebd0bc4af88
+                stepCounter: 111361e4-d35a-4673-a051-bd1e2eed23b9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: aff3d0d7-5387-431d-b71f-92494fdf56b7
+          stepCounter: a69b2961-8900-4c7e-a285-e77f7e435792
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: UNIT_PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d086b5e8-19f4-4510-8257-78a5cf27ed20
+                stepCounter: 111361e4-d35a-4673-a051-bd1e2eed23b9
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ORDER_LINE_ITEMS_RAW: 111361e4-d35a-4673-a051-bd1e2eed23b9
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: ORDER_LINE_ITEMS_RAW
+        join:
+          joinCondition: |-
+            FROM {{ ref('SRC', 'ORDER_LINE_ITEMS_RAW') }} "ORDER_LINE_ITEMS_RAW"
+            INNER JOIN "STG_ORDERS_RAW"."ORDER_ID" = "ORDER_LINE_ITEMS_RAW"."ORDER_ID"
+        name: STG_ORDER_LINE_ITEMS_RAW
+        noLinkRefs: []
+  name: STG_ORDER_LINE_ITEMS_RAW
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
