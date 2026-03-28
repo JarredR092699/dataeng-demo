@@ -1,0 +1,7 @@
+fileVersion: 1
+id: ed628519-c870-4037-9c5a-c704d70db920
+name: DEVICE_READINGS
+steps:
+  - 0abf6083-873c-403f-b3eb-934e9390e0e4
+  - 135eb4f4-f132-4915-9620-f72d29898cdb
+type: Subgraph
