@@ -2,16 +2,16 @@ fileVersion: 1
 id: "22"
 mappingDefinitions:
   DIM:
-    database: ""
-    schema: ""
+    database: SAMPLE_DATA
+    schema: DIM
   IM_RPT:
-    database: ""
-    schema: ""
+    database: SAMPLE_DATA
+    schema: IM_RPT
   SRC:
     database: SAMPLE_DATA
     schema: LOAD
   STAGE:
-    database: ""
-    schema: ""
+    database: SAMPLE_DATA
+    schema: STAGE
 name: DEV
 type: Environment
