@@ -1,0 +1,198 @@
+fileVersion: 1
+id: 725357e5-54fb-4154-b0ca-6cc35374068f
+name: STG_EMPLOYEE_HR_DATA_25
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGE
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c05ee21a-72d6-46f9-830b-19147a862bd2
+          stepCounter: 725357e5-54fb-4154-b0ca-6cc35374068f
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: EMPLOYEE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5df980e5-935d-4246-911a-31a545a2e2fd
+                stepCounter: b2d53d23-1232-4c23-8503-e319d6f3ba26
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f36e319f-e5ee-4d50-97ad-e92ef585a04b
+          stepCounter: 725357e5-54fb-4154-b0ca-6cc35374068f
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: FIRST_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2efda3a-2c5e-41f9-b09f-d37b825fe591
+                stepCounter: b2d53d23-1232-4c23-8503-e319d6f3ba26
+            transform: CASE WHEN "EMPLOYEE_HR_DATA_25"."FIRST_NAME" = 'Sofia' THEN 'Jarred' ELSE "EMPLOYEE_HR_DATA_25"."FIRST_NAME" END
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e129a548-a83d-4fd0-9d35-9a7d85dbc1bc
+          stepCounter: 725357e5-54fb-4154-b0ca-6cc35374068f
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: LAST_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d14058cb-65a7-4cb0-b703-b81f69eed520
+                stepCounter: b2d53d23-1232-4c23-8503-e319d6f3ba26
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 87ede380-14d1-4927-a83d-4d7164ede54a
+          stepCounter: 725357e5-54fb-4154-b0ca-6cc35374068f
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: EMAIL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3b9ce3f0-9c3a-4a1c-a2a9-ab5c8801b108
+                stepCounter: b2d53d23-1232-4c23-8503-e319d6f3ba26
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 76330ef3-c38f-47fb-b214-425ceac54169
+          stepCounter: 725357e5-54fb-4154-b0ca-6cc35374068f
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: DEPARTMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8e092315-4997-4f27-ba9b-95a5a5fc7fcc
+                stepCounter: b2d53d23-1232-4c23-8503-e319d6f3ba26
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 85e53056-959d-43b0-a4ef-21b0892b190d
+          stepCounter: 725357e5-54fb-4154-b0ca-6cc35374068f
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: JOB_TITLE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 13c91e80-d09b-4423-b1ff-0dcb87e8f461
+                stepCounter: b2d53d23-1232-4c23-8503-e319d6f3ba26
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1100493d-7007-4a83-81c0-e5be01fb434a
+          stepCounter: 725357e5-54fb-4154-b0ca-6cc35374068f
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: HIRE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d70716a7-c183-4546-845f-5fb342a4e76c
+                stepCounter: b2d53d23-1232-4c23-8503-e319d6f3ba26
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 93f6681f-87c8-47b3-9b26-8245c78aec2e
+          stepCounter: 725357e5-54fb-4154-b0ca-6cc35374068f
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: SALARY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: de1d74c9-aa9c-479b-a0a0-1b2fc1c0efe2
+                stepCounter: b2d53d23-1232-4c23-8503-e319d6f3ba26
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4fc1645d-5cda-43a2-9f52-6828329c91a4
+          stepCounter: 725357e5-54fb-4154-b0ca-6cc35374068f
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: LOCATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 73c1e796-cf79-40b7-ba7f-801c8fd05873
+                stepCounter: b2d53d23-1232-4c23-8503-e319d6f3ba26
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 771f3413-c1b9-4c31-b2d4-b232740e6c9e
+          stepCounter: 725357e5-54fb-4154-b0ca-6cc35374068f
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: MANAGER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9a83d1e1-42e8-4e9f-a170-9359ccc4931b
+                stepCounter: b2d53d23-1232-4c23-8503-e319d6f3ba26
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a79d1306-7f7e-4f58-8b4b-0d528e576ee8
+          stepCounter: 725357e5-54fb-4154-b0ca-6cc35374068f
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: STATUS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9489956d-616b-40eb-a82d-081c4f1b30f8
+                stepCounter: b2d53d23-1232-4c23-8503-e319d6f3ba26
+            transform: ""
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          EMPLOYEE_HR_DATA_25: b2d53d23-1232-4c23-8503-e319d6f3ba26
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: EMPLOYEE_HR_DATA_25
+        join:
+          joinCondition: FROM {{ ref('SRC', 'EMPLOYEE_HR_DATA_25') }} "EMPLOYEE_HR_DATA_25"
+        name: STG_EMPLOYEE_HR_DATA_25
+        noLinkRefs: []
+  name: STG_EMPLOYEE_HR_DATA_25
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  table: STG_EMPLOYEE_HR_DATA_25
+  type: sql
+  version: 1
+type: Node
