@@ -1,0 +1,124 @@
+fileVersion: 1
+id: 135eb4f4-f132-4915-9620-f72d29898cdb
+name: STG_DEVICE_READINGS_RAW
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2dac92e7-cedc-4bc2-8959-f32e0b762069
+          stepCounter: 135eb4f4-f132-4915-9620-f72d29898cdb
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: READING_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9d177ffb-ae15-4175-959f-6dad2d77fa28
+                stepCounter: 0abf6083-873c-403f-b3eb-934e9390e0e4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ac9fa1e2-af5f-4dab-b24c-5cbc6b0d332e
+          stepCounter: 135eb4f4-f132-4915-9620-f72d29898cdb
+        config: {}
+        dataType: VARCHAR(10)
+        description: ""
+        name: DEVICE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3c913996-d70c-4a01-a079-72571ee68915
+                stepCounter: 0abf6083-873c-403f-b3eb-934e9390e0e4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 60d46bee-735e-4050-a01c-572c77c9ba5e
+          stepCounter: 135eb4f4-f132-4915-9620-f72d29898cdb
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: READING_TS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9845ee8e-e567-409f-9af1-5716400c0460
+                stepCounter: 0abf6083-873c-403f-b3eb-934e9390e0e4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 83ea7215-3528-409d-a626-c635d70f0cc4
+          stepCounter: 135eb4f4-f132-4915-9620-f72d29898cdb
+        config: {}
+        dataType: VARCHAR(20)
+        description: ""
+        name: TEMPERATURE_READING
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a86827f9-3fab-465f-851e-691d7e161ece
+                stepCounter: 0abf6083-873c-403f-b3eb-934e9390e0e4
+            transform: CAST("DEVICE_READINGS_RAW"."TEMPERATURE_READING" AS FLOAT)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d69c58ec-f3aa-4d2a-979c-21abc5547802
+          stepCounter: 135eb4f4-f132-4915-9620-f72d29898cdb
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: HUMIDITY_PCT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 52380cd0-2622-4c83-a417-9e35a3922aa4
+                stepCounter: 0abf6083-873c-403f-b3eb-934e9390e0e4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5855b1a8-f881-40b4-86c0-3b5b634ec238
+          stepCounter: 135eb4f4-f132-4915-9620-f72d29898cdb
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: BATTERY_PCT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f14ab3ab-fa1b-4ab0-8e34-67ac4e0c2767
+                stepCounter: 0abf6083-873c-403f-b3eb-934e9390e0e4
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          DEVICE_READINGS_RAW: 0abf6083-873c-403f-b3eb-934e9390e0e4
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: DEVICE_READINGS_RAW
+        join:
+          joinCondition: FROM {{ ref('SRC', 'DEVICE_READINGS_RAW') }} "DEVICE_READINGS_RAW"
+        name: STG_DEVICE_READINGS_RAW
+        noLinkRefs: []
+  name: STG_DEVICE_READINGS_RAW
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
