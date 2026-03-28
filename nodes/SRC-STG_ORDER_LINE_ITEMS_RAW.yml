@@ -88,7 +88,10 @@ operation:
                 stepCounter: 111361e4-d35a-4673-a051-bd1e2eed23b9
             transform: ""
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           ORDER_LINE_ITEMS_RAW: 111361e4-d35a-4673-a051-bd1e2eed23b9
@@ -97,16 +100,20 @@ operation:
         dependencies:
           - locationName: SRC
             nodeName: ORDER_LINE_ITEMS_RAW
+          - locationName: SRC
+            nodeName: STG_ORDERS_RAW
         join:
           joinCondition: |-
             FROM {{ ref('SRC', 'ORDER_LINE_ITEMS_RAW') }} "ORDER_LINE_ITEMS_RAW"
-            INNER JOIN "STG_ORDERS_RAW"."ORDER_ID" = "ORDER_LINE_ITEMS_RAW"."ORDER_ID"
+            INNER JOIN {{ ref('SRC', 'STG_ORDERS_RAW') }} "STG_ORDERS_RAW"
+              ON "STG_ORDERS_RAW"."ORDER_ID" = "ORDER_LINE_ITEMS_RAW"."ORDER_ID"
         name: STG_ORDER_LINE_ITEMS_RAW
         noLinkRefs: []
   name: STG_ORDER_LINE_ITEMS_RAW
   overrideSQL: false
   schema: ""
   sqlType: Stage
+  table: STG_ORDER_LINE_ITEMS_RAW
   type: sql
   version: 1
 type: Node
