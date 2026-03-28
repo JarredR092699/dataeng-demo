@@ -72,7 +72,7 @@ operation:
           - columnReferences:
               - columnCounter: a86827f9-3fab-465f-851e-691d7e161ece
                 stepCounter: 0abf6083-873c-403f-b3eb-934e9390e0e4
-            transform: CAST("DEVICE_READINGS_RAW"."TEMPERATURE_READING" AS FLOAT)
+            transform: TRY_CAST("DEVICE_READINGS_RAW"."TEMPERATURE_READING" AS FLOAT)
       - appliedColumnTests: {}
         columnReference:
           columnCounter: d69c58ec-f3aa-4d2a-979c-21abc5547802
@@ -102,7 +102,10 @@ operation:
                 stepCounter: 0abf6083-873c-403f-b3eb-934e9390e0e4
             transform: ""
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           DEVICE_READINGS_RAW: 0abf6083-873c-403f-b3eb-934e9390e0e4
@@ -119,6 +122,7 @@ operation:
   overrideSQL: false
   schema: ""
   sqlType: Stage
+  table: STG_DEVICE_READINGS_RAW
   type: sql
   version: 1
 type: Node
