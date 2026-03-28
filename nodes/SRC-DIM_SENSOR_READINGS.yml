@@ -15,10 +15,7 @@ operation:
   metadata:
     appliedNodeTests: []
     columns:
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 9b4c0d8e-31e9-49b9-a43c-99d937d583fe
           stepCounter: 142e08db-2d4c-4eed-8a67-591ea256a9e1
@@ -54,6 +51,7 @@ operation:
         config: {}
         dataType: TIMESTAMP_NTZ(9)
         description: ""
+        isBusinessKey: true
         name: EVENT_TS
         nullable: true
         sourceColumnReferences:
@@ -103,10 +101,7 @@ operation:
               - columnCounter: cb90d781-0f8a-445d-8160-bd70d3f4eb81
                 stepCounter: bdd510d0-998e-4413-b225-3f716dfd0ebd
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: e9cf336e-bf25-417a-a238-93d4f5e9e8d4
           stepCounter: 142e08db-2d4c-4eed-8a67-591ea256a9e1
@@ -120,10 +115,7 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: d5841418-41c8-461c-a8d2-b51944d2ae8e
           stepCounter: 142e08db-2d4c-4eed-8a67-591ea256a9e1
@@ -137,10 +129,7 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 12b2e7fb-f6d5-4c40-b3a0-2612f494dbec
           stepCounter: 142e08db-2d4c-4eed-8a67-591ea256a9e1
@@ -154,10 +143,7 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: e9fe7d44-337c-4e8c-a082-497f90d4a7f8
           stepCounter: 142e08db-2d4c-4eed-8a67-591ea256a9e1
@@ -171,10 +157,7 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 405b6825-1775-4d58-801b-36482ad66d59
           stepCounter: 142e08db-2d4c-4eed-8a67-591ea256a9e1
@@ -188,10 +171,7 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 843320e5-7a64-4150-91fa-3357372c9550
           stepCounter: 142e08db-2d4c-4eed-8a67-591ea256a9e1
@@ -206,7 +186,10 @@ operation:
           - columnReferences: []
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           STG_SENSOR_READINGS: bdd510d0-998e-4413-b225-3f716dfd0ebd
@@ -223,6 +206,7 @@ operation:
   overrideSQL: false
   schema: ""
   sqlType: Dimension
+  table: DIM_SENSOR_READINGS
   type: sql
   version: 1
 type: Node
