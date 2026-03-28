@@ -1,6 +1,6 @@
 excludeSelector: ""
 fileVersion: 1
 id: "1"
-includeSelector: "{ subgraph: \"DEVICE_READINGS\" } OR { subgraph: \"ORDER_LINE_ERROR\" } OR { subgraph: \"ORDER_LINE_ITEMS_RAW\" } OR { subgraph: \"ORDERS_RAW\" } OR { subgraph: \"SENSOR_READINGS\" }"
+includeSelector: "{ subgraph: \"DEVICE_READINGS\" } OR { subgraph: \"ORDER_LINE_ERROR\" } OR { subgraph: \"ORDER_LINE_ITEMS_RAW\" } OR { subgraph: \"ORDERS_RAW\" } OR { subgraph: \"SENSOR_READINGS\" } OR { subgraph: \"EMPLOYEES\" } OR { location: \"SRC\" name: \"STG_EMPLOYEES_RAW1\" }"
 name: hourly refresh
 type: Job
