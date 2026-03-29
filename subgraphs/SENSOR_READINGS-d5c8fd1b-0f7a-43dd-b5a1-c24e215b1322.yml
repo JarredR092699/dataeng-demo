@@ -2,5 +2,7 @@ fileVersion: 1
 id: d5c8fd1b-0f7a-43dd-b5a1-c24e215b1322
 name: SENSOR_READINGS
 steps:
+  - 5cf8474b-e11c-402c-975b-f6bf034946f0
+  - 9ed16a30-1a62-4063-ab12-b14c5fdd8b92
   - f70e75d7-6480-49d7-862f-b3eb063d209a
 type: Subgraph
