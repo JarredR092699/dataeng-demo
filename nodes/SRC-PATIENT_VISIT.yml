@@ -1,0 +1,244 @@
+fileVersion: 1
+id: 6bc20c49-43d0-4d35-9c4d-42cac4286189
+name: PATIENT_VISIT
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3cb63139-3aa3-4e24-90aa-a9742be07fd0
+          stepCounter: 6bc20c49-43d0-4d35-9c4d-42cac4286189
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: VISIT_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 72df6fde-8067-4508-b11b-4d2cdc9c9606
+          stepCounter: 6bc20c49-43d0-4d35-9c4d-42cac4286189
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: PATIENT_ID
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: caf1e117-2d35-4cda-a36e-0d3ea5eed504
+          stepCounter: 6bc20c49-43d0-4d35-9c4d-42cac4286189
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: PROVIDER_ID
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1f8bcf0-7a75-4ff5-b2c3-dd8fcc041697
+          stepCounter: 6bc20c49-43d0-4d35-9c4d-42cac4286189
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: FACILITY_ID
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6414626a-f552-4d81-9b46-bfc0c7867e65
+          stepCounter: 6bc20c49-43d0-4d35-9c4d-42cac4286189
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: DIAGNOSIS_ID
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 99f772b8-9fad-4f2d-a3f2-20ab7fb39aba
+          stepCounter: 6bc20c49-43d0-4d35-9c4d-42cac4286189
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: VISIT_DATE
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3433d9f1-4b48-42eb-a7ef-be528b315a99
+          stepCounter: 6bc20c49-43d0-4d35-9c4d-42cac4286189
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        name: VISIT_TYPE
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5821090e-c785-44a9-be04-7bda8d4a783c
+          stepCounter: 6bc20c49-43d0-4d35-9c4d-42cac4286189
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: LENGTH_OF_STAY_DAYS
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b85f9f03-c64d-4b13-9adb-6b218374b796
+          stepCounter: 6bc20c49-43d0-4d35-9c4d-42cac4286189
+        config: {}
+        dataType: NUMBER(10,2)
+        defaultValue: ""
+        description: ""
+        name: TOTAL_CHARGES
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 71cdba3d-02b9-403f-b6c0-ab474cc28b37
+          stepCounter: 6bc20c49-43d0-4d35-9c4d-42cac4286189
+        config: {}
+        dataType: NUMBER(10,2)
+        defaultValue: ""
+        description: ""
+        name: INSURANCE_PAID
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 143b32b4-247d-4717-8e82-13e396c930e2
+          stepCounter: 6bc20c49-43d0-4d35-9c4d-42cac4286189
+        config: {}
+        dataType: NUMBER(10,2)
+        defaultValue: ""
+        description: ""
+        name: PATIENT_PAID
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cdf5a32a-a8d1-42f2-82d0-d74981ace430
+          stepCounter: 6bc20c49-43d0-4d35-9c4d-42cac4286189
+        config: {}
+        dataType: VARCHAR(100)
+        defaultValue: ""
+        description: ""
+        name: DISCHARGE_STATUS
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: PATIENT_VISIT
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

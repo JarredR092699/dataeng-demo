@@ -1,0 +1,10 @@
+fileVersion: 1
+id: 978197d1-0779-4654-a32c-5c58dc9b4cc3
+name: HEALTHCARE_STAR_SCHEMA
+steps:
+  - 2780d502-541d-47c4-9128-dbf8482f9e87
+  - 54076897-0dcf-4958-90ab-aa97960b43ca
+  - 6bc20c49-43d0-4d35-9c4d-42cac4286189
+  - 8d3f6295-5187-4ac9-bd4c-26ff5d909224
+  - 8f7a306a-485e-4901-a0f7-0cc83d8104e2
+type: Subgraph

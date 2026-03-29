@@ -1,0 +1,111 @@
+fileVersion: 1
+id: 8f7a306a-485e-4901-a0f7-0cc83d8104e2
+name: DIAGNOSIS
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cdb657b8-3796-46b2-b6f2-d348efed6a11
+          stepCounter: 8f7a306a-485e-4901-a0f7-0cc83d8104e2
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: DIAGNOSIS_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9e6cec07-c9f9-42bc-bca8-8a589615c9d1
+          stepCounter: 8f7a306a-485e-4901-a0f7-0cc83d8104e2
+        config: {}
+        dataType: VARCHAR(10)
+        defaultValue: ""
+        description: ""
+        name: ICD10_CODE
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 001a2671-16c1-4c20-b622-d1735b47eb57
+          stepCounter: 8f7a306a-485e-4901-a0f7-0cc83d8104e2
+        config: {}
+        dataType: VARCHAR(200)
+        defaultValue: ""
+        description: ""
+        name: DIAGNOSIS_NAME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7b75e952-3e96-44a1-af59-70f2c16534ea
+          stepCounter: 8f7a306a-485e-4901-a0f7-0cc83d8104e2
+        config: {}
+        dataType: VARCHAR(100)
+        defaultValue: ""
+        description: ""
+        name: CATEGORY
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 60280b91-e8c1-4e20-b0de-40fc684c846d
+          stepCounter: 8f7a306a-485e-4901-a0f7-0cc83d8104e2
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: SEVERITY
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: DIAGNOSIS
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
