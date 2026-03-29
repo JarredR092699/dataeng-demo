@@ -4,6 +4,9 @@ mappingDefinitions:
   DIM:
     database: SAMPLE_DATA
     schema: DIM
+  FACT:
+    database: ""
+    schema: ""
   IM_RPT:
     database: SAMPLE_DATA
     schema: IM_RPT
