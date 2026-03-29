@@ -1,6 +1,6 @@
 fileVersion: 1
-id: 839b784b-7554-4370-be40-4a16d86e0670
-name: STG_EMPLOYEES_RAW1
+id: eb384390-f57c-44af-a55b-36043e6d650e
+name: STG_EMPLOYEES_RAW
 operation:
   config:
     insertStrategy: INSERT
@@ -12,15 +12,15 @@ operation:
   deployEnabled: true
   description: ""
   isMultisource: false
-  locationName: SRC
+  locationName: STAGE
   materializationType: table
   metadata:
     appliedNodeTests: []
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 7c12b002-5faa-4537-be2b-6c6f447a094f
-          stepCounter: 839b784b-7554-4370-be40-4a16d86e0670
+          columnCounter: 25910c01-eb05-46c7-98a4-c137138b6b9f
+          stepCounter: eb384390-f57c-44af-a55b-36043e6d650e
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -33,8 +33,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 2e6da60b-4d65-461d-8af0-5a9b00074c20
-          stepCounter: 839b784b-7554-4370-be40-4a16d86e0670
+          columnCounter: 116b5b68-09ec-4314-9e56-9530236b3511
+          stepCounter: eb384390-f57c-44af-a55b-36043e6d650e
         config: {}
         dataType: VARCHAR(50)
         description: ""
@@ -47,8 +47,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: e7bcd15e-d1e0-414e-a00c-48e9c2f3a847
-          stepCounter: 839b784b-7554-4370-be40-4a16d86e0670
+          columnCounter: 963f7ba5-4ca7-47af-834d-d07b30890a61
+          stepCounter: eb384390-f57c-44af-a55b-36043e6d650e
         config: {}
         dataType: VARCHAR(50)
         description: ""
@@ -61,8 +61,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 0dc3578b-4269-4340-b530-43de3247fae4
-          stepCounter: 839b784b-7554-4370-be40-4a16d86e0670
+          columnCounter: 427ee403-9d7f-489c-b373-bbece03964e9
+          stepCounter: eb384390-f57c-44af-a55b-36043e6d650e
         config: {}
         dataType: DATE
         description: ""
@@ -75,8 +75,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 42b92062-f951-4867-b5e4-acc40ec1aeea
-          stepCounter: 839b784b-7554-4370-be40-4a16d86e0670
+          columnCounter: a251db7e-6874-4118-991f-f41ef6b8a111
+          stepCounter: eb384390-f57c-44af-a55b-36043e6d650e
         config: {}
         dataType: VARCHAR(100)
         description: ""
@@ -89,8 +89,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: a55e79f1-aa16-42c7-a0ba-64a8b486b009
-          stepCounter: 839b784b-7554-4370-be40-4a16d86e0670
+          columnCounter: dcaf52ef-899e-42e7-be54-4f54a8f98ef0
+          stepCounter: eb384390-f57c-44af-a55b-36043e6d650e
         config: {}
         dataType: VARCHAR(10)
         description: ""
@@ -100,11 +100,11 @@ operation:
           - columnReferences:
               - columnCounter: eed3c701-a699-4a6b-b3a5-180826df0746
                 stepCounter: 3b412a3f-c7f1-4ce5-862a-acd2e457ed21
-            transform: COALESCE("EMPLOYEES_RAW"."DEPARTMENT_CODE", 'UNKNOWN')
+            transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 7d6ad871-bd59-408a-920e-adea0ee76b37
-          stepCounter: 839b784b-7554-4370-be40-4a16d86e0670
+          columnCounter: 92f2b316-d52a-40b3-8fd9-b85310a22d5d
+          stepCounter: eb384390-f57c-44af-a55b-36043e6d650e
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -117,8 +117,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 5929386f-4df8-4dde-9af3-8732f5752c4e
-          stepCounter: 839b784b-7554-4370-be40-4a16d86e0670
+          columnCounter: 3dd23ea5-bfb4-4514-b34d-a6994b0b2101
+          stepCounter: eb384390-f57c-44af-a55b-36043e6d650e
         config: {}
         dataType: VARCHAR(50)
         description: ""
@@ -131,8 +131,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: e7944aab-ef6d-4296-bdec-7a0a82a1d04f
-          stepCounter: 839b784b-7554-4370-be40-4a16d86e0670
+          columnCounter: 9206bf72-1a8e-41ea-8c75-2365683a072a
+          stepCounter: eb384390-f57c-44af-a55b-36043e6d650e
         config: {}
         dataType: VARCHAR(20)
         description: ""
@@ -144,10 +144,7 @@ operation:
                 stepCounter: 3b412a3f-c7f1-4ce5-862a-acd2e457ed21
             transform: ""
     cteString: ""
-    description: ""
-    destinationName: ""
     enabledColumnTestIDs: []
-    materializationOption: ""
     sourceMapping:
       - aliases:
           EMPLOYEES_RAW: 3b412a3f-c7f1-4ce5-862a-acd2e457ed21
@@ -158,13 +155,12 @@ operation:
             nodeName: EMPLOYEES_RAW
         join:
           joinCondition: FROM {{ ref('SRC', 'EMPLOYEES_RAW') }} "EMPLOYEES_RAW"
-        name: STG_EMPLOYEES_RAW1
+        name: STG_EMPLOYEES_RAW
         noLinkRefs: []
-  name: STG_EMPLOYEES_RAW1
+  name: STG_EMPLOYEES_RAW
   overrideSQL: false
   schema: ""
   sqlType: Stage
-  table: STG_EMPLOYEES_RAW1
   type: sql
   version: 1
 type: Node
