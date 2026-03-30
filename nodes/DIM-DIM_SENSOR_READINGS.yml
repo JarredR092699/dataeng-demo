@@ -5,6 +5,7 @@ operation:
   config:
     postSQL: ""
     preSQL: ""
+    selectDistinct: true
     testsEnabled: true
   database: ""
   deployEnabled: true
@@ -15,10 +16,7 @@ operation:
   metadata:
     appliedNodeTests: []
     columns:
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: d3b07a6d-c25e-4088-acef-d81fcdc84db8
           stepCounter: 9ed16a30-1a62-4063-ab12-b14c5fdd8b92
@@ -54,6 +52,7 @@ operation:
         config: {}
         dataType: TIMESTAMP_NTZ(9)
         description: ""
+        isBusinessKey: true
         name: EVENT_TS
         nullable: true
         sourceColumnReferences:
@@ -89,10 +88,7 @@ operation:
               - columnCounter: 738fab03-5fb1-452a-8a86-675bd68a7c31
                 stepCounter: 5cf8474b-e11c-402c-975b-f6bf034946f0
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: bb1cbda8-d356-4f9f-aaeb-089cd5db2553
           stepCounter: 9ed16a30-1a62-4063-ab12-b14c5fdd8b92
@@ -106,10 +102,7 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 8be668d5-7544-42ef-b42b-9d7ad53a9135
           stepCounter: 9ed16a30-1a62-4063-ab12-b14c5fdd8b92
@@ -123,10 +116,7 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: 8541f1dd-c6c1-4693-b4d6-520017e1e67d
           stepCounter: 9ed16a30-1a62-4063-ab12-b14c5fdd8b92
@@ -140,10 +130,7 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: ea3053f9-647f-4f88-8aa4-dc077a0b6178
           stepCounter: 9ed16a30-1a62-4063-ab12-b14c5fdd8b92
@@ -157,10 +144,7 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: f7a92694-a11f-4456-8c3f-d12b953df592
           stepCounter: 9ed16a30-1a62-4063-ab12-b14c5fdd8b92
@@ -174,10 +158,7 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: f1dce305-cd15-48bb-82b2-3a422eea59b7
           stepCounter: 9ed16a30-1a62-4063-ab12-b14c5fdd8b92
@@ -192,7 +173,10 @@ operation:
           - columnReferences: []
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           STG_SENSOR_READINGS: 5cf8474b-e11c-402c-975b-f6bf034946f0
@@ -209,6 +193,7 @@ operation:
   overrideSQL: false
   schema: ""
   sqlType: Dimension
+  table: DIM_SENSOR_READINGS
   type: sql
   version: 1
 type: Node
