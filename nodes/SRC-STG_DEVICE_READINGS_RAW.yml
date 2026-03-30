@@ -64,7 +64,7 @@ operation:
           columnCounter: 83ea7215-3528-409d-a626-c635d70f0cc4
           stepCounter: 135eb4f4-f132-4915-9620-f72d29898cdb
         config: {}
-        dataType: VARCHAR(20)
+        dataType: FLOAT
         description: ""
         name: TEMPERATURE_READING
         nullable: true
@@ -72,7 +72,7 @@ operation:
           - columnReferences:
               - columnCounter: a86827f9-3fab-465f-851e-691d7e161ece
                 stepCounter: 0abf6083-873c-403f-b3eb-934e9390e0e4
-            transform: CAST("DEVICE_READINGS_RAW"."TEMPERATURE_READING" AS FLOAT)
+            transform: TRY_CAST("DEVICE_READINGS_RAW"."TEMPERATURE_READING" AS FLOAT)
       - appliedColumnTests: {}
         columnReference:
           columnCounter: d69c58ec-f3aa-4d2a-979c-21abc5547802

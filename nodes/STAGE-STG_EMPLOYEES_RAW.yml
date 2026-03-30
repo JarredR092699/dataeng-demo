@@ -95,12 +95,12 @@ operation:
         dataType: VARCHAR(10)
         description: ""
         name: DEPARTMENT_CODE
-        nullable: false
+        nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: eed3c701-a699-4a6b-b3a5-180826df0746
                 stepCounter: 3b412a3f-c7f1-4ce5-862a-acd2e457ed21
-            transform: ""
+            transform: COALESCE("EMPLOYEES_RAW"."DEPARTMENT_CODE", 'UNKNOWN')
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 92f2b316-d52a-40b3-8fd9-b85310a22d5d
@@ -144,7 +144,10 @@ operation:
                 stepCounter: 3b412a3f-c7f1-4ce5-862a-acd2e457ed21
             transform: ""
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           EMPLOYEES_RAW: 3b412a3f-c7f1-4ce5-862a-acd2e457ed21
@@ -161,6 +164,7 @@ operation:
   overrideSQL: false
   schema: ""
   sqlType: Stage
+  table: STG_EMPLOYEES_RAW
   type: sql
   version: 1
 type: Node
